@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website untuk latihan wajah (Face Exercise) dengan tips dan teknik untuk kesehatan dan kecantikan wajah.">
+    <title>Face Exercise - Latihan Wajah</title>
+
+    <!-- Menghubungkan ke Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Optional: Menghubungkan ke font dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        #video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+        #emotion-img {
+            width: auto;
+            height: 200px;
+        }
+        video, img {
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .info {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    </style>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-image: url('https://via.placeholder.com/1600x900'); 
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        /* Banner Section with Parallax Effect */
+        .banner-section {
+            background-image: url('https://plus.unsplash.com/premium_photo-1722728055718-20684f6bddbb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+            background-size: cover;
+            background-attachment: fixed; /* Parallax effect */
+            background-position: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+        }
+
+        .banner-section .container {
+            text-align: center;
+            max-width: 900px; /* Optional: set a max-width to prevent text from being too wide */
+        }
+
+        .banner-text, .banner-button {
+            transition: opacity 1s ease-in-out; /* Smooth transition for fading effect */
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #007bff;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensure it stays above other content */
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: #f8f9fa !important;
+        }
+
+        /* Button styling */
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        /* Ensure images maintain 16:9 aspect ratio */
+        .card-img-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* This is 9 / 16 * 100 to achieve 16:9 aspect ratio */
+            overflow: hidden;
+        }
+
+        .card-img-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the area while maintaining the aspect ratio */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Face Exercise</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#exercises">Artikel</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+        <div class="container">
+            <h2 class="banner-text">Selamat Datang di Face Exercise</h2>
+            <p class="banner-text">Latihan wajah untuk merawat dan mengencangkan kulit serta meningkatkan kesehatan wajah Anda.</p>
+            <a href="#exercises" class="btn btn-custom btn-lg banner-button">Mulai Latihan</a>
+        </div>
+    </section>
+
+<!-- Section Exercises (With Cards) -->
+<section id="exercises" class="container py-5">
+    <h2 class="text-center mb-5">Latihan Wajah Terbaik</h2>
+    <p class="text-center mb-4">Temukan latihan wajah terbaik untuk merawat dan mengencangkan kulit Anda.</p>
+    
+    <!-- Card Deck (Responsive) -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-img-wrapper">
+                    <img src="https://media1.tenor.com/m/rH9J08_cfjEAAAAd/giga-gigacat.gif" class="card-img-top" alt="Latihan Wajah 1">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Latihan Pipi</h5>
+                    <p class="card-text">Latihan ini akan membantu mengencangkan otot pipi dan memberikan bentuk wajah yang lebih ramping.</p>
+                    <a href="#" class="btn btn-primary mt-auto">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-img-wrapper">
+                    <img src="https://media1.tenor.com/m/Kpag_7P2NGwAAAAC/cat-cat-forehead.gif" class="card-img-top" alt="Latihan Wajah 2">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Latihan Dahi</h5>
+                    <p class="card-text">Latihan ini membantu mengurangi kerutan di dahi dan meremajakan kulit wajah.</p>
+                    <a href="#" class="btn btn-primary mt-auto">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-img-wrapper">
+                    <img src="https://media.tenor.com/KumyLqmNtq8AAAAM/staring-cat-mewing-cat.gif" class="card-img-top" alt="Latihan Wajah 3">
+                </div>
+                <div class="card-body d-flex flex-column" id="informasi web">
+                    <h5 class="card-title">Latihan Mata</h5>
+                    <p class="card-text">Latihan ini akan mengurangi kantung mata dan memberikan mata yang lebih cerah dan segar.</p>
+                    <a href="#" class="btn btn-primary mt-auto">Pelajari Lebih Lanjut</a>
+                </div>
+                <!-- Game Ekspresi Wajah -->
+                
+
+            </div>
+        </div>
+        <div class="mt-5 text-center container">
+            <h4>Game Ekspresi Wajah</h4>
+            <p>Tiru ekspresi di samping dalam waktu <span id="timer">10</span> detik!</p>
+
+                <!-- Kamera -->
+                <h1>Game Tiru Ekspresi</h1>
+
+                <div class="info">
+                    Target Ekspresi: <span id="target-emotion">...</span><br>
+                    Skor: <span id="score">0</span><br>
+                    Waktu: <span id="timer">5</span> detik
+                </div>
+
+                <div id="video-container">
+                    <img id="video-feed" src="{{ url_for('video_feed') }}" width="400" alt="Webcam Stream">
+                    <img id="emotion-img" src="" alt="Target Emosi">
+                </div>
+
+            <!-- Skor -->
+            <div>
+                <p>Skor Anda: <span id="score">0</span></p>
+            </div>
+
+            <button class="btn btn-success" onclick="startGame()">Mulai Ulang</button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center">
+    <p>&copy; 2024 Face Exercise. Semua hak dilindungi.</p>
+    <p><a href="#">Kebijakan Privasi</a> | <a href="#">Syarat dan Ketentuan</a></p>
+</footer>
+
+<!-- Menghubungkan ke Bootstrap JS dan Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<!-- JavaScript untuk scroll effect -->
+<script>
+    // Get the banner text and button elements
+    const bannerText = document.querySelectorAll('.banner-text');
+    const bannerButton = document.querySelector('.banner-button');
+
+    // Function to handle scroll event
+    function handleScroll() {
+        const scrollPosition = window.scrollY; // Get how far the user has scrolled
+        const maxScroll = 500; // Maximum scroll distance before text and button completely fade out
+        const opacityValue = 1 - Math.min(scrollPosition / maxScroll, 1); // Calculate opacity (from 1 to 0)
+
+        // Apply the opacity to each banner text element
+        bannerText.forEach(function(text) {
+            text.style.opacity = opacityValue;
+        });
+
+        // Apply the opacity to the banner button
+        if (bannerButton) {
+            bannerButton.style.opacity = opacityValue;
+        }       
+    }
+
+    // Listen to the scroll event
+    window.addEventListener('scroll', handleScroll);
+</script>
+<script>
+    let targetEmotion = "";
+    let score = 0;
+    let timeLeft = 5;
+
+    function getRandomEmotion() {
+        const emotions = ['happy', 'sad', 'angry', 'surprise', 'neutral'];
+        return emotions[Math.floor(Math.random() * emotions.length)];
+    }
+
+    function setTargetEmotion() {
+        targetEmotion = getRandomEmotion();
+        document.getElementById("target-emotion").textContent = targetEmotion;
+        document.getElementById("emotion-img").src = "/static/emotion_icons/" + targetEmotion + ".png";
+    }
+
+    async function checkEmotion() {
+        try {
+            const response = await fetch("/detect_emotion");
+            const data = await response.json();
+            const currentEmotion = data.emotion;
+
+            if (currentEmotion === targetEmotion) {
+                score++;
+                document.getElementById("score").textContent = score;
+                setTargetEmotion(); // Ganti emosi target
+                timeLeft = 5; // Reset waktu
+            }
+        } catch (e) {
+            console.error("Gagal cek emosi:", e);
+        }
+    }
+
+    function countdown() {
+        if (timeLeft > 0) {
+            timeLeft--;
+            document.getElementById("timer").textContent = timeLeft;
+        } else {
+            setTargetEmotion(); // Ganti target jika waktu habis
+            timeLeft = 5;
+        }
+    }
+
+    // Inisialisasi
+    setTargetEmotion();
+    setInterval(checkEmotion, 1000); // Cek emosi tiap detik
+    setInterval(countdown, 1000);    // Timer countdown
+</script>
+</body>
+</html>

@@ -9,6 +9,9 @@ def load_image(image_path, grayscale=False, target_size=None):
 
 def load_detection_model(model_path):
     detection_model = cv2.CascadeClassifier(model_path)
+    if detection_model.empty():
+        print(f"Error loading face detection model from {model_path}")
+        return None
     return detection_model
 
 def detect_faces(detection_model, gray_image_array):
